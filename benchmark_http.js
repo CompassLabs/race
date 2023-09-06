@@ -7,12 +7,10 @@ const ipcPath = '/path/to/your/hardhat.ipc'; // Replace with the actual IPC path
 const web3 = new Web3.Web3('http://localhost:8545')
 
 
-// anvil --fork-url https://eth-mainnet.g.alchemy.com/v2/3d0zJXgqTEDrHY-nptBN-iJULY_DpjYc --fork-block-number 17151020 --hardfork shanghai --accounts 1 --balance 10000000000000000000 --chain-id 31337 --port 8545 --base-fee 0 --disable-block-gas-limit --no-rate-limit --ipc /tmp/anvil_debug.ipc
-
-
 var data = require('./requests.json');
 
 async function main() {
+    console.log("RUNNING ON ANVIL LOCAL FORK OVER HTTP WITH WEB3.JS")
     const start = Date.now();
     for (tx of data) {
         tt = tx['type'];
@@ -55,7 +53,7 @@ async function main() {
         // console.log(tx);
     }
     const end = Date.now();
-    console.log(`Execution time: ${end - start} ms`);
+    console.log(`Web3.js HTTP Anvil: ${(end - start) / 1000} seconds\n`);
 
 }
 

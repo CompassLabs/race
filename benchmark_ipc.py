@@ -44,6 +44,7 @@ def anvil_cmd(port: int) -> str:
 
 
 if __name__ == "__main__":
+    print("RUNNING ON ANVIL LOCAL FORK OVER IPC WITH WEB3.PY")
     os.system("npx kill-port 8545")
     cmd = anvil_cmd(8545)
     if not os.path.exists("logs"):
@@ -75,4 +76,4 @@ if __name__ == "__main__":
         else:
             raise ValueError(f"{type,params}")
 
-    print(f"total {round(time.time()-start_overall,2)} seconds")
+    print(f"Web3.py IPC Anvil: {round(time.time()-start_overall,2)} seconds\n")
