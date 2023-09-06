@@ -1,6 +1,17 @@
 # race
 A speed benchmark replaying transactions on a Uniswap V3 pool.
 
+## Setup
+
+```bash
+scripts/setup.sh
+```
+
+Running this script will do 3 things:
+1. Install [`foundry`](!https://book.getfoundry.sh/getting-started/installation#using-foundryup), an EVM manager which is used to fork mainnet.
+2. Install `node` dependencies
+3. Install `Python` dependencies
+
 ## Quick Start
 
 1. In one terminal run:
