@@ -33,16 +33,20 @@ You should see an output that looks something like:
 ➜  race git:(main) ✗ scripts/run_all.sh
 NOTE: web3.js is running without provider. You need to pass a provider in order to interact with the network!
 RUNNING ON ANVIL LOCAL FORK OVER HTTP WITH WEB3.JS
-Web3.js HTTP Anvil: 1.097 seconds
+Web3.js HTTP Anvil: 3.418 seconds
 
-Process on port 8545 killed
 RUNNING ON ANVIL LOCAL FORK OVER HTTP WITH WEB3.PY
-Could not kill process on port 8545. No process running on port.
+Process on port 8545 killed
 Loaded 194 transactions
-Web3.py HTTP Anvil: 14.84 seconds
+Web3.py HTTP Anvil: 7.98 seconds
+
+RUNNING ON ANVIL LOCAL FORK OVER AsyncHTTP WITH WEB3.PY
+Process on port 8545 killed
+Loaded 194 transactions
+Web3.py AsyncHTTP Anvil: 7.87 seconds
 
 RUNNING ON ANVIL LOCAL FORK OVER IPC WITH WEB3.PY
 Process on port 8545 killed
 Loaded 194 transactions
-Web3.py IPC Anvil: 11.74 seconds
+Web3.py IPC Anvil: 7.46 seconds
 ```
