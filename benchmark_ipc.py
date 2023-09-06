@@ -5,7 +5,6 @@ import os
 
 from web3 import Web3, IPCProvider
 import dotenv
-from tqdm import tqdm
 
 dotenv.load_dotenv()
 RPC_URL = os.environ.get("RPC_URL")
@@ -43,6 +42,7 @@ def anvil_cmd(port: int) -> str:
         f"anvil --fork-url {RPC_URL} --fork-block-number 17151020 --hardfork shanghai --accounts 1 --balance 10000000000000000000 --chain-id 31337 --port {port} --base-fee 0 --disable-block-gas-limit --no-rate-limit --ipc /tmp/anvil_debug.ipc"
     )
 
+
 if __name__ == "__main__":
     os.system("npx kill-port 8545")
     cmd = anvil_cmd(8545)
@@ -61,17 +61,17 @@ if __name__ == "__main__":
     print(f"Loaded {len(txs)} transactions")
 
     start_overall = time.time()
-    for tx in tqdm(txs, total=len(txs)):
-        type=tx['type']
-        params=tx['params']
-        if type=='eth_send':
+    for tx in txs:
+        type = tx['type']
+        params = tx['params']
+        if type == 'eth_send':
             reciept = web3.eth.send_transaction(params)
             result = web3.eth.wait_for_transaction_receipt(reciept)
-        elif type=='eth_call':
+        elif type == 'eth_call':
             res = web3.provider.make_request("eth_call", params)
             result = decode_response(res, tx['return_types'])
-        elif type=='eth_sendTransaction':
-            tx= web3.provider.make_request("eth_sendTransaction", params)
+        elif type == 'eth_sendTransaction':
+            tx = web3.provider.make_request("eth_sendTransaction", params)
         else:
             raise ValueError(f"{type,params}")
 

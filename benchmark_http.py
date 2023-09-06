@@ -5,7 +5,6 @@ import os
 
 from web3 import Web3, HTTPProvider
 import dotenv
-from tqdm import tqdm
 from eth_abi import decode, encode
 
 dotenv.load_dotenv()
@@ -62,7 +61,7 @@ if __name__ == "__main__":
     print(f"Loaded {len(txs)} transactions")
 
     start_overall = time.time()
-    for tx in tqdm(txs, total=len(txs)):
+    for tx in txs:
         type = tx['type']
         params = tx['params']
         if type == 'eth_send':
@@ -76,4 +75,4 @@ if __name__ == "__main__":
         else:
             raise ValueError(f"{type,params}")
 
-print(f"total {round(time.time()-start_overall,2)} seconds")
+    print(f"total {round(time.time()-start_overall,2)} seconds")
