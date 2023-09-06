@@ -1,0 +1,16 @@
+{
+  "name": "race",
+  "version": "1.0.0",
+  "description": "A speed benchmark replaying transactions on a Uniswap V3 pool.",
+  "main": "benchmark.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "benchmark": "reset; node benchmark.js "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "web3": "^4.1.1"
+  }
+}
