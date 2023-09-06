@@ -1,9 +1,7 @@
 const Web3 = require('web3');
 const axios = require('axios');
-const nodeUrl = 'http://localhost:8545';
 
-const net = require('net');
-const ipcPath = '/path/to/your/hardhat.ipc'; // Replace with the actual IPC path
+const nodeUrl = 'http://localhost:8545';
 const web3 = new Web3.Web3('http://localhost:8545')
 
 
@@ -25,7 +23,7 @@ async function main() {
                 params: params,
                 id: 1,
             };
-            axios.post(nodeUrl, body)
+            await axios.post(nodeUrl, body)
                 .then(response => {
                     //console.log('Response:', response.data.result);
                 })
@@ -40,7 +38,7 @@ async function main() {
                 params: params,
                 id: 1,
             };
-            axios.post(nodeUrl, body)
+            await axios.post(nodeUrl, body)
                 .then(response => {
                     //console.log('Transact Response:', response.data.result);
                 })
