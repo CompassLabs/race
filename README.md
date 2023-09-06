@@ -14,3 +14,24 @@ A speed benchmark replaying transactions on a Uniswap V3 pool.
     ```bash
     scripts/run_all.sh
     ```
+
+## What does success look like?
+
+You should see an output that looks something like:
+```bash
+➜  race git:(main) ✗ scripts/run_all.sh
+NOTE: web3.js is running without provider. You need to pass a provider in order to interact with the network!
+RUNNING ON ANVIL LOCAL FORK OVER HTTP WITH WEB3.JS
+Web3.js HTTP Anvil: 1.097 seconds
+
+Process on port 8545 killed
+RUNNING ON ANVIL LOCAL FORK OVER HTTP WITH WEB3.PY
+Could not kill process on port 8545. No process running on port.
+Loaded 194 transactions
+Web3.py HTTP Anvil: 14.84 seconds
+
+RUNNING ON ANVIL LOCAL FORK OVER IPC WITH WEB3.PY
+Process on port 8545 killed
+Loaded 194 transactions
+Web3.py IPC Anvil: 11.74 seconds
+```
