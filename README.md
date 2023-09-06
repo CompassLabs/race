@@ -10,4 +10,7 @@ A speed benchmark replaying transactions on a Uniswap V3 pool.
 
 2. Create a `.env` file and fill in the `RPC_URL` environment variable, similar to `.env.example`
 
-3. Run `scripts/run_all.sh`
+3. Run:
+    ```bash
+    scripts/run_all.sh
+    ```
