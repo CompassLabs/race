@@ -1,8 +1,15 @@
 import json
+import subprocess
 import time
+import os
 
 from web3 import Web3, IPCProvider
-import random
+import dotenv
+from tqdm import tqdm
+
+dotenv.load_dotenv()
+RPC_URL = os.environ.get("RPC_URL")
+
 
 from eth_abi import decode, encode
 def encode_args(fun_sig: str, fun_args: tuple) -> str:
@@ -30,44 +37,42 @@ def decode_response(res1: dict, return_types: tuple):
         return tuple(decoded_response)
 
 
+def anvil_cmd(port: int) -> str:
+    """Get the anvil command to fork the chain at the given block number."""
+    return str(
+        f"anvil --fork-url {RPC_URL} --fork-block-number 17151020 --hardfork shanghai --accounts 1 --balance 10000000000000000000 --chain-id 31337 --port {port} --base-fee 0 --disable-block-gas-limit --no-rate-limit --ipc /tmp/anvil_debug.ipc"
+    )
 
-""" START ANVIL LIKE THIS
-anvil --fork-url https://eth-mainnet.g.alchemy.com/v2/3d0zJXgqTEDrHY-nptBN-iJULY_DpjYc --fork-block-number 17151020 --hardfork shanghai --accounts 1 --balance 10000000000000000000 --chain-id 31337 --port 8545 --base-fee 0 --disable-block-gas-limit --no-rate-limit --ipc /tmp/anvil_debug.ipc
-"""
+if __name__ == "__main__":
+    os.system("npx kill-port 8545")
+    cmd = anvil_cmd(8545)
+    if not os.path.exists("logs"):
+            os.mkdir("logs")
+    proc = subprocess.Popen(
+        cmd.split(" "), stdout=open(f"logs/console_out_port_{8545}.txt", "w")
+    )
+    web3 = Web3(IPCProvider("/tmp/anvil_debug.ipc"))
+    while not web3.is_connected():
+        pass
+    web3.provider.make_request("anvil_autoImpersonateAccount", [True])
 
+    with open("requests.json", "r") as f:
+        txs = json.load(f)
+    print(f"Loaded {len(txs)} transactions")
 
-web3 = Web3(IPCProvider(f"/tmp/anvil_debug.ipc"))
-web3.provider.make_request("anvil_autoImpersonateAccount", [True])
+    start_overall = time.time()
+    for tx in tqdm(txs, total=len(txs)):
+        type=tx['type']
+        params=tx['params']
+        if type=='eth_send':
+            reciept = web3.eth.send_transaction(params)
+            result = web3.eth.wait_for_transaction_receipt(reciept)
+        elif type=='eth_call':
+            res = web3.provider.make_request("eth_call", params)
+            result = decode_response(res, tx['return_types'])
+        elif type=='eth_sendTransaction':
+            tx= web3.provider.make_request("eth_sendTransaction", params)
+        else:
+            raise ValueError(f"{type,params}")
 
-
-
-with open("requests.json", "r") as f:
-    txs = json.load(f)
-
-
-print(f"Loaded {len(txs)} transactions")
-
-
-tx = txs[0]
-
-start_overall = time.time()
-for ix, tx in enumerate(txs):
-    type=tx['type']
-    params=tx['params']
-    if type=='eth_send':
-        before = web3.eth.get_balance(params['to'])
-        reciept = web3.eth.send_transaction(params)
-        result = web3.eth.wait_for_transaction_receipt(reciept)
-        after = web3.eth.get_balance(params['to'])
-        assert after>before
-    elif type=='eth_call':
-        res = web3.provider.make_request("eth_call", params)
-        result = decode_response(res, tx['return_types'])
-        print(result)
-    elif type=='eth_sendTransaction':
-        tx= web3.provider.make_request("eth_sendTransaction", params)
-        print(tx)
-    else:
-        raise ValueError(f"{type,params}")
-
-print(f"total {round(time.time()-start_overall,2)} seconds")
+    print(f"total {round(time.time()-start_overall,2)} seconds")
