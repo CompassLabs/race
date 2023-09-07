@@ -6,6 +6,7 @@ import os
 from web3 import Web3, HTTPProvider
 import dotenv
 from eth_abi import decode, encode
+from tqdm import tqdm
 
 dotenv.load_dotenv()
 RPC_URL = os.environ.get("RPC_URL")
@@ -62,7 +63,7 @@ if __name__ == "__main__":
     print(f"Loaded {len(txs)} transactions")
 
     start_overall = time.time()
-    for tx in txs:
+    for tx in tqdm(txs, total=len(txs)):
         type = tx['type']
         params = tx['params']
         if type == 'eth_send':
@@ -70,7 +71,6 @@ if __name__ == "__main__":
             result = web3.eth.wait_for_transaction_receipt(reciept)
         elif type == 'eth_call':
             res = web3.provider.make_request("eth_call", params)
-            result = decode_response(res, tx['return_types'])
         elif type == 'eth_sendTransaction':
             tx = web3.provider.make_request("eth_sendTransaction", params)
         else:
