@@ -1,0 +1,573 @@
+[
+    {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "eth_getBlockByNumber",
+        "params": [
+          "0x105b42c",
+          false
+        ]
+    },
+    {
+        "id": 2,
+        "jsonrpc": "2.0",
+        "method": "eth_gasPrice"
+    },
+    {
+        "id": 3,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "0x75b5807d204b0bb1b365cbd8378d11df745d50f728260a38b50681d35167d252",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 4,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "0xbcfd7009208f543c1715695a953c37ac732ae460eb760bc35933431daf99681f",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 5,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "0xbcfd7009208f543c1715695a953c37ac732ae460eb760bc35933431daf99681f",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 6,
+        "jsonrpc": "2.0",
+        "method": "eth_getBalance",
+        "params": [
+          "0x024cf7841e5fa964e86321b354cd2bea49f54c28",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 7,
+        "jsonrpc": "2.0",
+        "method": "eth_getTransactionCount",
+        "params": [
+          "0x024cf7841e5fa964e86321b354cd2bea49f54c28",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 8,
+        "jsonrpc": "2.0",
+        "method": "eth_getCode",
+        "params": [
+          "0x024cf7841e5fa964e86321b354cd2bea49f54c28",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 9,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x0",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 10,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x4",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 11,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "0x983c87d9994b3cb3a364df5fd8ca35035c7b8a4128c8624c741f390317edc10e",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 12,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xfe7e1d2f8ea07fe460378142fb8dbddb894a3f14fccff9622990dfad0feec2b",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 13,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xfe7e1d2f8ea07fe460378142fb8dbddb894a3f14fccff9622990dfad0feec2c",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 14,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xfe7e1d2f8ea07fe460378142fb8dbddb894a3f14fccff9622990dfad0feec2d",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 15,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xfe7e1d2f8ea07fe460378142fb8dbddb894a3f14fccff9622990dfad0feec2e",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 16,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x1",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 17,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x2",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 18,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x37b",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 19,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xb998f7c17b772f0eee1e51ec14d30395e17b69f5fac2564e6929c870d9295fd8",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 20,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xf643f216ff25c2a403f15413cce628efa341cdd17b88cbe9cada363ac8e94cad",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 21,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xb998f7c17b772f0eee1e51ec14d30395e17b69f5fac2564e6929c870d9295fd9",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 22,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xb998f7c17b772f0eee1e51ec14d30395e17b69f5fac2564e6929c870d9295fda",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 23,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xf643f216ff25c2a403f15413cce628efa341cdd17b88cbe9cada363ac8e94cae",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 24,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xf643f216ff25c2a403f15413cce628efa341cdd17b88cbe9cada363ac8e94caf",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 25,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x5340821de08073bd734162f064186e3eaa9398a44f9a8a217b36a05ddcdf9923",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 26,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x5340821de08073bd734162f064186e3eaa9398a44f9a8a217b36a05ddcdf9924",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 27,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x5340821de08073bd734162f064186e3eaa9398a44f9a8a217b36a05ddcdf9925",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 28,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x5340821de08073bd734162f064186e3eaa9398a44f9a8a217b36a05ddcdf9926",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 29,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xeccef344a1c9acbdcfe5963af092f1c91be581dd0c295f00e6657eb109d22ea3",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 30,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xea01fe86a61dd86eb07b63a36662165af876fa0b485c0d7197b1dd58dd16e8cc",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 31,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xeccef344a1c9acbdcfe5963af092f1c91be581dd0c295f00e6657eb109d22ea4",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 32,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xeccef344a1c9acbdcfe5963af092f1c91be581dd0c295f00e6657eb109d22ea5",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 33,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xea01fe86a61dd86eb07b63a36662165af876fa0b485c0d7197b1dd58dd16e8cd",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 34,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xea01fe86a61dd86eb07b63a36662165af876fa0b485c0d7197b1dd58dd16e8ce",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 35,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x37c",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 36,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xee83c8af044aa5651e0a210b9f3cd863ddf0aad1500a1efd0b6ff05e68f2fd9b",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 37,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xee83c8af044aa5651e0a210b9f3cd863ddf0aad1500a1efd0b6ff05e68f2fd9c",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 38,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xee83c8af044aa5651e0a210b9f3cd863ddf0aad1500a1efd0b6ff05e68f2fd9d",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 39,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xee83c8af044aa5651e0a210b9f3cd863ddf0aad1500a1efd0b6ff05e68f2fd9e",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 40,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x5f0bf24a57235e4d0775310be41e903e77ebca5ce0699f1b8dc8913aed1bace2",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 41,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x723cf9007e6cff430d496a92817cd289689e484249c911924b98a4e2a40df1af",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 42,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x5f0bf24a57235e4d0775310be41e903e77ebca5ce0699f1b8dc8913aed1bace3",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 43,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x5f0bf24a57235e4d0775310be41e903e77ebca5ce0699f1b8dc8913aed1bace4",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 44,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x723cf9007e6cff430d496a92817cd289689e484249c911924b98a4e2a40df1b0",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 45,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x723cf9007e6cff430d496a92817cd289689e484249c911924b98a4e2a40df1b1",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 46,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "0x7d581b47ad6a32e7ba742ef11ea65d5aaaad99f16bf134319a3e2f5283b3659c",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 47,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+          "0x476d51d96072cf139ee6b70f4b03426429e731c326a710c90acc261f6968f92b",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 48,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xe950ffb9e1d92dfa31c153b7720f024afa80f612195348fa7037398088178c0e",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 49,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xe950ffb9e1d92dfa31c153b7720f024afa80f612195348fa7037398088178c0f",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 50,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xe950ffb9e1d92dfa31c153b7720f024afa80f612195348fa7037398088178c10",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 51,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xe950ffb9e1d92dfa31c153b7720f024afa80f612195348fa7037398088178c11",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 52,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xb17220e9636c37d616387c7d4f5c4349eedcb5a20abc48b32d6e8180d8b29ace",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 53,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x7d05222f0d1b18d252bb20c936d3c80a084c6861e576d3e6cc64a0a9cdf88132",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 54,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xb17220e9636c37d616387c7d4f5c4349eedcb5a20abc48b32d6e8180d8b29acf",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 55,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0xb17220e9636c37d616387c7d4f5c4349eedcb5a20abc48b32d6e8180d8b29ad0",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 56,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x7d05222f0d1b18d252bb20c936d3c80a084c6861e576d3e6cc64a0a9cdf88133",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 57,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x7d05222f0d1b18d252bb20c936d3c80a084c6861e576d3e6cc64a0a9cdf88134",
+          "0x105b42c"
+        ]
+    },
+    {
+        "id": 58,
+        "jsonrpc": "2.0",
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+          "0x37d",
+          "0x105b42c"
+        ]
+    }
+]
