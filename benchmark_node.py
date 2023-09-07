@@ -28,6 +28,6 @@ if __name__ == "__main__":
             RPC_URL,
             headers=headers,
             data=data,
-        )
+        ).json()
 
     print(f"HTTP archive node: {round(time.time()-start_overall,2)} seconds\n")
