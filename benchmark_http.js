@@ -1,8 +1,8 @@
 const Web3 = require('web3');
 const axios = require('axios');
 
-const nodeUrl = 'http://localhost:8545';
-const web3 = new Web3.Web3('http://localhost:8545')
+const nodeUrl = 'http://localhost:7545';
+const web3 = new Web3.Web3('http://localhost:7545')
 
 
 var data = require('./requests.json');

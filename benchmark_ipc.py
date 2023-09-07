@@ -46,12 +46,12 @@ def anvil_cmd(port: int) -> str:
 
 if __name__ == "__main__":
     print("RUNNING ON ANVIL LOCAL FORK OVER IPC WITH WEB3.PY")
-    os.system("npx kill-port 8545")
-    cmd = anvil_cmd(8545)
+    os.system("npx kill-port 7545")
+    cmd = anvil_cmd(7545)
     if not os.path.exists("logs"):
             os.mkdir("logs")
     proc = subprocess.Popen(
-        cmd.split(" "), stdout=open(f"logs/console_out_port_{8545}.txt", "w")
+        cmd.split(" "), stdout=open(f"logs/console_out_port_{7545}.txt", "w")
     )
     web3 = Web3(IPCProvider("/tmp/anvil_debug.ipc"))
     while not web3.is_connected():

@@ -38,13 +38,13 @@ Loaded 58 transactions
 HTTP archive node: 6.41 seconds
 
 RUNNING ON ANVIL LOCAL FORK OVER HTTP WITH WEB3.PY
-Could not kill process on port 8545. No process running on port.
+Could not kill process on port 7545. No process running on port.
 Loaded 194 transactions
 100%|█████████████████████████████████████████| 194/194 [00:06<00:00, 27.86it/s]
 Web3.py HTTP Anvil: 6.97 seconds
 
 RUNNING ON ANVIL LOCAL FORK OVER IPC WITH WEB3.PY
-Process on port 8545 killed
+Process on port 7545 killed
 Loaded 194 transactions
 100%|█████████████████████████████████████████| 194/194 [00:06<00:00, 32.08it/s]
 Web3.py IPC Anvil: 6.05 seconds

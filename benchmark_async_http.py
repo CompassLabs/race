@@ -46,13 +46,13 @@ def anvil_cmd(port: int) -> str:
 
 
 async def main():
-    cmd = anvil_cmd(8545)
+    cmd = anvil_cmd(7545)
     if not os.path.exists("logs"):
             os.mkdir("logs")
     proc = subprocess.Popen(
-        cmd.split(" "), stdout=open(f"logs/console_out_port_{8545}.txt", "w")
+        cmd.split(" "), stdout=open(f"logs/console_out_port_{7545}.txt", "w")
     )
-    web3 = AsyncWeb3(AsyncHTTPProvider("http://localhost:8545"))
+    web3 = AsyncWeb3(AsyncHTTPProvider("http://localhost:7545"))
     while not await web3.is_connected():
         pass
     await web3.provider.make_request("anvil_autoImpersonateAccount", [True])
@@ -80,5 +80,5 @@ async def main():
 
 if __name__ == "__main__":
     print("RUNNING ON ANVIL LOCAL FORK OVER AsyncHTTP WITH WEB3.PY")
-    os.system("npx kill-port 8545")
+    os.system("npx kill-port 7545")
     asyncio.run(main())
