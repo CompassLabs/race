@@ -7,6 +7,10 @@ import dotenv
 
 dotenv.load_dotenv()
 RPC_URL = os.environ.get("RPC_URL")
+headers = {
+    "Content-Type": "application/json",
+    "Accept-Encoding": "gzip",
+}
 
 
 if __name__ == "__main__":
@@ -17,16 +21,13 @@ if __name__ == "__main__":
     print(f"Loaded {len(txs)} transactions")
 
     session = requests.Session()
-    headers = {
-        "Content-Type": "application/json",
-        "Accept-Encoding": "gzip",
-    }
     start_overall = time.time()
     for tx in tqdm(txs, total=len(txs)):
-        session.post(
+        data = json.dumps(tx)
+        response = session.post(
             RPC_URL,
             headers=headers,
-            data=tx,
+            data=data,
         )
 
     print(f"HTTP archive node: {round(time.time()-start_overall,2)} seconds\n")

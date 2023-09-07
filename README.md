@@ -7,6 +7,8 @@ A speed benchmark replaying transactions on a Uniswap V3 pool.
 scripts/setup.sh
 ```
 
+We recommend to use an INFURA node, alchemy rate limits will timeout the first async benchmark.
+
 Running this script will do 3 things:
 1. Install [`foundry`](!https://book.getfoundry.sh/getting-started/installation#using-foundryup), an EVM manager which is used to fork mainnet.
 2. Install `node` dependencies
@@ -26,26 +28,24 @@ Running this script will do 3 things:
 You should see an output that looks something like:
 ```bash
 ➜  race git:(main) ✗ scripts/run_all.sh
+RUNNING DIRECT ARCHIVE NODE REQUESTS OVER ASYNC HTTP
+Loaded 58 transactions
+Async HTTP archive node: 1.31 seconds
+
 RUNNING DIRECT ARCHIVE NODE REQUESTS OVER HTTP
 Loaded 58 transactions
-100%|███████████████████████████████████████████| 58/58 [00:07<00:00,  7.62it/s]
-HTTP archive node: 7.62 seconds
+100%|███████████████████████████████████████████| 58/58 [00:06<00:00,  9.06it/s]
+HTTP archive node: 6.41 seconds
 
 RUNNING ON ANVIL LOCAL FORK OVER HTTP WITH WEB3.PY
 Could not kill process on port 8545. No process running on port.
 Loaded 194 transactions
-100%|█████████████████████████████████████████| 194/194 [00:07<00:00, 24.38it/s]
-Web3.py HTTP Anvil: 7.96 seconds
-
-RUNNING ON ANVIL LOCAL FORK OVER AsyncHTTP WITH WEB3.PY
-Process on port 8545 killed
-Loaded 194 transactions
-100%|█████████████████████████████████████████| 194/194 [00:07<00:00, 26.46it/s]
-Web3.py AsyncHTTP Anvil: 7.34 seconds
+100%|█████████████████████████████████████████| 194/194 [00:06<00:00, 27.86it/s]
+Web3.py HTTP Anvil: 6.97 seconds
 
 RUNNING ON ANVIL LOCAL FORK OVER IPC WITH WEB3.PY
 Process on port 8545 killed
 Loaded 194 transactions
-100%|█████████████████████████████████████████| 194/194 [00:07<00:00, 26.34it/s]
-Web3.py IPC Anvil: 7.37 seconds
+100%|█████████████████████████████████████████| 194/194 [00:06<00:00, 32.08it/s]
+Web3.py IPC Anvil: 6.05 seconds
 ```
